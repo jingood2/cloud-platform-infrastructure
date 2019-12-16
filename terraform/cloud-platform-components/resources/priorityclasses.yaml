@@ -13,3 +13,11 @@ metadata:
 value: 1000000000
 globalDefault: false
 description: "This priority class is meant to be used as the system-node-critical class, outside of the kube-system namespace."
+---
+apiVersion: scheduling.k8s.io/v1beta1
+kind: PriorityClass
+metadata:
+  name: overprovisioning
+value: -1
+globalDefault: false
+description: "Priority class used by overprovisioning."
